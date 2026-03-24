@@ -121,24 +121,32 @@ router.delete('/review/:isbn', (req, res) => {
     });
 });
 
-// 📚 Async/Await using Axios
+
+// 📚 Async route to get all books using Axios
 router.get('/async/books', async (req, res) => {
     try {
+        // Call own API using Axios
         const response = await axios.get('http://localhost:5000/books');
+
+        // Send fetched data as response
         return res.status(200).json(response.data);
+
     } catch (error) {
+        // Handle error if request fails
         return res.status(500).json({ message: "Error fetching books" });
     }
 });
 
-// 📘 Async ISBN
+// 📘 Async route to get book by ISBN using Axios
 router.get('/async/isbn/:isbn', async (req, res) => {
     const isbn = req.params.isbn;
 
     try {
+        // Fetch all books
         const response = await axios.get('http://localhost:5000/books');
         const booksData = response.data;
 
+        // Find book by ISBN
         const book = booksData[isbn];
 
         if (book) {
