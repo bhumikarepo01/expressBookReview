@@ -1,0 +1,8 @@
+Command:
+curl https://api.github.com/repos/bhumikarepo01/expressBookReview
+
+Output:
+{
+  "full_name": "bhumikarepo01/expressBookReview",
+  "fork": true
+}

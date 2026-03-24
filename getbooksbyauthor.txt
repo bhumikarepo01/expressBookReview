@@ -1,0 +1,11 @@
+Command:
+curl http://localhost:5000/books/author/Paulo%20Coelho
+
+Output:
+{
+  "1": {
+    "title": "The Alchemist",
+    "author": "Paulo Coelho",
+    "reviews": {}
+  }
+}

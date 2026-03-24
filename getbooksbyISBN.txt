@@ -1,0 +1,9 @@
+Command:
+curl http://localhost:5000/books/isbn/1
+
+Output:
+{
+  "title": "The Alchemist",
+  "author": "Paulo Coelho",
+  "reviews": {}
+}
